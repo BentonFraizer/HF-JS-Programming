@@ -15,7 +15,6 @@ while (isSunk == false) {
     alert("Пожалуйста, введите число от 0 до 6");
   } else {
     guesses = guesses + 1;
-    debugger;
     if (guess == location1 || guess == location2 || guess == location3) {
       alert("Попал!");
       hits = hits + 1;
