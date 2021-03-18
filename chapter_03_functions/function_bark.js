@@ -79,3 +79,22 @@
 // thingamajig(2);
 // console.log(clunkCounter);
 //==================================================================================================
+// Далее приведён фрагмент кода, когда ГП (balance) остаётся неизменной
+// поскольку она замещаетмся параметром balance в момент выполнения функции.
+// Также здесь показано, что код, который располагается после return никак обрабатываться не будет.
+// он игнориркется программой. 
+var balance = 10500;
+var cameraOn = true;
+
+function steal(balance, amount) {
+  debugger
+  cameraOn = false;
+  if (amount < balance) {
+    balance = balance - amount;
+  }
+  return amount;
+  cameraOn = true;
+}
+
+var amount = steal(balance, 1250);
+alert("criminal: you stole " + amount + "!");
